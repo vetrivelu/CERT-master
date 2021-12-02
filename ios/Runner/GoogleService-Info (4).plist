@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>596278734058-a2hkgku88o2gvce76a9vrf0kf0ogm5ss.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.596278734058-a2hkgku88o2gvce76a9vrf0kf0ogm5ss</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>596278734058-q9j82fk3kf8e8jonp5avfef43h97mjo7.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCCfKeZt1YO3nvyYtoOogem3p-MLuJLyTQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>596278734058</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.digisailor.safecampusCert</string>
+	<key>PROJECT_ID</key>
+	<string>kkm-beacon</string>
+	<key>STORAGE_BUCKET</key>
+	<string>kkm-beacon.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:596278734058:ios:a6066af7bda1590fcc7b93</string>
+	<key>DATABASE_URL</key>
+	<string>https://kkm-beacon-default-rtdb.asia-southeast1.firebasedatabase.app</string>
+</dict>
+</plist>

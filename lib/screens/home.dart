@@ -23,12 +23,12 @@ import '../main.dart';
 import 'contact_list.dart';
 import 'dart:io';
 
-import 'package:carousel_slider/carousel_slider.dart';
+// import 'package:carousel_slider/carousel_slider.dart';
 // ignore: unused_import
 import 'package:path/path.dart';
-import 'package:flutter/material.dart';
-import 'package:image_picker/image_picker.dart';
-import 'package:pert/models/announcements.dart';
+// import 'package:flutter/material.dart';
+// import 'package:image_picker/image_picker.dart';
+// import 'package:pert/models/announcements.dart';
 
 //
 
@@ -58,6 +58,26 @@ class _HomePageState extends State<HomePage> {
     super.dispose();
   }
 
+  notification() async {
+    NotificationSettings settings = await _firebaseMessaging.requestPermission(
+      alert: true,
+      announcement: true,
+      badge: true,
+      carPlay: false,
+      criticalAlert: false,
+      provisional: true,
+      sound: true,
+    );
+    if (settings.authorizationStatus == AuthorizationStatus.authorized) {
+      print('User granted permission');
+    } else if (settings.authorizationStatus == AuthorizationStatus.provisional) {
+      print('User granted provisional permission');
+    } else {
+      print('User declined or has not accepted permission');
+    }
+  }
+
+
   @override
   void initState() {
     super.initState();
@@ -67,6 +87,7 @@ class _HomePageState extends State<HomePage> {
     //     imgList = json!["imageUrl"];
     //   }
     // });
+    notification();
 
 
     widget.user.loadContacts();
@@ -218,7 +239,7 @@ class _HomePageState extends State<HomePage> {
                     return
                       CarouselSlider(
                         options: CarouselOptions(
-                          height: 180,
+                          height: 150,
                           autoPlay: true,
                           aspectRatio: 2,
                           enlargeCenterPage: true,
@@ -321,7 +342,7 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
-  Paths? _path;
+  // Paths? _path;
   late List<Paths?> _paths = [];
   List<Widget> getItems() {
     List<Widget> widgets = [];
@@ -399,7 +420,7 @@ class NetworkImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    File file = File(url);
+    // File file = File(url);
     return
       Padding(
         padding: const EdgeInsets.all(10),
@@ -459,7 +480,7 @@ class FileImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    File file = File(path);
+    // File file = File(path);
     return Padding(
       padding: EdgeInsetsDirectional.all(12),
       child: Container(
